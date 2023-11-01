@@ -1,0 +1,45 @@
+<div class="contain mb-2">
+    <div class="navbar mt-4 navbar-dark bg-light justify-content-center border border-success" id="textarea">
+  
+      <h4 class="card-title font-weight-bold ">
+        <h2 class="text-success ">View Faculty alloted to student Mentor</h2>
+      </h4>
+    </div>
+  </div>
+  
+  <div class="card mr-2 ml-2">
+      <div class="card card-outline card-primary">
+        <div class="card-body">
+          <table id="myTable" class="table tabe-hover table-bordered table-responsive table-condensed " id="parent">
+  
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Branch / Year</th>
+                <th>Discuss the Problem</th>
+                <th>Select Faculty</th>
+                <th>Select Students by Group</th>
+               
+              </tr>
+            </thead>
+  
+            <tbody>
+              <% for(var i = (users.length-1); i>= 0 ; i--) { %>
+              <tr>
+  
+                
+                <td><b><%=users[i].date%></b></td>
+                <td><b><%=users[i].branch_year%></b></td>
+                <td><b><%=users[i].topic%></b></td>
+                <td><b><%=users[i].name%></b></td>
+                <td><b><%=users[i].rollno%></b></td>
+                
+  
+                
+              </tr>
+              <% } %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      </div>

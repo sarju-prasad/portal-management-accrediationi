@@ -1,0 +1,314 @@
+<style>
+ 
+
+.modal__wrapper{
+    position: fixed;
+    left:0;
+    top:0;
+    background: rgba(0, 0, 0, 0.6);
+    width: 220vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    
+}
+.modal__wrapper1{
+    position: fixed;
+    left:0;
+    top:0;
+    background: rgba(0, 0, 0, 0.6);
+    width: 220vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    
+}
+.modal__wrapper2{
+    position: fixed;
+    left:0;
+    top:0;
+    background: rgba(0, 0, 0, 0.6);
+    width: 220vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    
+}
+.modal__wrapper3{
+    position: fixed;
+    left:0;
+    top:0;
+    background: rgba(0, 0, 0, 0.6);
+    width: 220vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    
+}
+
+.modal__container {
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    width: 110vh;
+    height: 100vh;
+    padding: 10px;
+    border-radius: 4px;
+    position: relative;
+}
+.btn__purple {
+    cursor: pointer;
+}
+
+p {
+    line-height: 1.0;
+    margin-bottom: 10px;
+    text-align: center;
+    text-align: justify;
+    padding: 5px 5px;
+}
+
+.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+</style>
+
+<div class="contain">
+  <%- include ("./nav2") %>
+</div>
+<div class="contain mb-2">
+  <div class="navbar mt-4 navbar-dark bg-light justify-content-center border border-success" id="textarea">
+
+    <h4 class="card-title font-weight-bold ">
+      <h2 class="text-success ">Sport/Cultural Competitions</h2>
+
+    </h4>
+  </div>
+</div>
+
+<div class="card mr-2 ml-2">
+  <%- include ("./messages") %>
+
+
+
+    <div class="card card-outline card-primary">
+      <div class="card-body text-center align-items-center">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">Cultural Club</h5>
+                <img src="/assets/Cultural_club.jpg" class="card-img-top" alt="...">
+                <p class="card-text">“Art is not what you see but what you make others see”. With this belief in mind, CSJM University endeavors to showcase life as...</p>
+                <button class="btn__purple btn btn-primary" id="trigger">Club Detail</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">Fitness Club</h5>
+                <img src="/assets/fitness_club.jpg" class="card-img-top" alt="...">
+                <p class="card-text">Yoga and meditation club helps in understanding the physical and psychical controls whose aim is to make practitioner aware of the ...</p>
+                <button class="btn__purple btn btn-primary" id="trigger1">Club Detail</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">Coding Club</h5>
+                <img src="/assets/coding_Club02.jpg" class="card-img-top" alt="...">
+                <p class="card-text">This Club EVOLUTION: UIET CODING CLUB is for those Who want to interact with like-Minded Peers and explore the World of Computer...</p>
+                <button class="btn__purple btn btn-primary" id="trigger2">Club Detail</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">Cooking Club</h5>
+                <img src="/assets/cooking_club03.jpg" class="card-img-top" alt="...">
+                <p class="card-text">While discussing the problems that came up with the students' internships, we found out that many faced food problems...</p>
+                <button class="btn__purple btn btn-primary" id="trigger3">Club Detail</button>
+              </div>
+            </div>
+          </div>
+          <div class="col my-4">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">Gardening Club</h5>
+                <img src="/assets/Gardening_Club03.jpg" class="card-img-top" alt="...">
+                <p class="card-text">This Gardening club has been initiated with a vision to make the campus green and Eco-friendly and also to educate the community...</p>
+                <button class="btn__purple btn btn-primary" id="trigger">Club Detail</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card my-4" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">Literary Club</h5>
+                <img src="/assets/Literary_Club.jpg" class="card-img-top" alt="...">
+                <p class="card-text">For the all-round development of the students and to enrich their technical knowledge the university provides a platform for various...</p>
+                <button class="btn__purple btn btn-primary" id="trigger">Club Detail</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card my-4" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">Photography Club</h5>
+                <img src="/assets/photography05.jpg" class="card-img-top" alt="...">
+                <p class="card-text">Photography Club is open to all students interested in photography, editing student films and photography in our campus. Our goal is to bring ...</p>
+                <button class="btn__purple btn btn-primary" id="trigger">Club Detail</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card my-4" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">Robots & Drone Club</h5>
+                <img src="/assets/Drone02.jpg" class="card-img-top" alt="...">
+                <p class="card-text">Robotics is the branch of technology that deals with the design, construction, operation, structural disposition, manufacture and ...</p>
+                <button class="btn__purple btn btn-primary" id="trigger">Club Detail</button>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+          
+          
+  
+
+    <div class="modal__wrapper">
+        <div class="modal__container">
+            <button class="close">&times;</button>
+            <img src="/assets/Cultural_club.jpg" class="card-img-top" alt="...">
+            <p>“Art is not what you see but what you make others see”. With this belief in mind, CSJM University endeavors to showcase life as they see it through the eyes of art. Arts and Cultural Club is an ambitious, all-inclusive one. It is a tempting, artistic, beautiful meeting-place for anybody with passion. The clubs’ mission is to bring out the hidden talents among students and also provide them a stage where they can showcase their arts and cultural talent and interest. The club provides lot of opportunities in the form of competitions and workshops for igniting the spark of interest present in the budding technocrats and honing their skills towards showcasing their talents.
+              1. Dance Club 2. Music Club 3. Drama Club</p>
+            <div class="action">
+            </div>
+        </div>
+    </div>
+
+    <div class="modal__wrapper1 " >
+        <div class="modal__container">
+            <button class="close">&times;</button>
+            <img src="/assets/fitness_club.jpg" class="card-img-top" alt="...">
+            <p>Yoga and meditation club helps in understanding the physical and psychical controls whose aim is to make practitioner aware of the identity of Atma (soul) and Brahman (supreme soul). Yoga and meditation club not only provides health, vigour, brightness and alertness to the body and mind, it also fills the life with satisfaction, happiness and pleasure. The Main objective of the club is to reduces tension, stress, anxiety, weakness, helplessness, fear, negative thoughts etc. which are increased day by day in this mechanical human life.
+             Activities:
+              Conducts yoga and meditation training classes. Organizes guest lectures on spiritual education and ethical values. Conducts competitions related yoga and meditation. Gym, Yoga, Swimming, Sports</p>
+            <div class="action">
+            </div>
+        </div>
+    </div>
+
+    <div class="modal__wrapper2 " >
+        <div class="modal__container">
+            <button class="close">&times;</button>
+            <img src="/assets/coding_Club02.jpg" class="card-img-top" alt="...">
+            <p>This Club EVOLUTION: UIET CODING CLUB is for those Who want to interact with like-Minded Peers and explore the World of Computer Science.The Club's Main Motto is to help each and everyone who has the passion and love for coding. Our Club aims to help the Growth of Every individual in the Field of Coding. The Main Goal are conducting classes in the area of Competitive Coding, Development and DataStructure and Algorithms. Also, Conducting more coding Competition to reach every student in the Campus.We aim to encouarge participations in competitions like ACM-ICPC, Google KickStart, Google CodeJam and open source contributions like GSoc,Hackathon etc.</p>
+            <div class="action">
+            </div>
+        </div>
+    </div>
+
+    <div class="modal__wrapper3 " >
+        <div class="modal__container">
+            <button class="close">&times;</button>
+            <img src="/assets/cooking_club03.jpg" class="card-img-top" alt="...">
+            <p>While discussing the problems that came up with the students’ internships, we found out that many faced food problems (especially the ones with a foreign internship). The lack of basic cooking skills compelled them to eat out regularly, or live on instant noodles and chips, which can be agreed upon as an unhealthy diet. Cooking Club is started with a passion for cooking and a zeal to solve the aforementioned problems. We also wanted to start a student-run cafe, a concept which is popular in foreign universities but somehow never got implemented in India. We sincerely hope that other universities in India start their own student-run cafe as a means of promoting culinary arts, learning a basic and essential life skill, and preserving their family recipes.</p>
+            <div class="action">
+            </div>
+        </div>
+    </div>
+         
+
+
+        </div>
+
+      </div>
+    
+</div>
+</div>
+<script>
+  const trigger = document.querySelector('#trigger');
+  const trigger1 = document.querySelector('#trigger1');
+  const trigger2 = document.querySelector('#trigger2');
+  const trigger3 = document.querySelector('#trigger3');
+const modalWrapper = document.querySelector('.modal__wrapper');
+const modalWrapper1 = document.querySelector('.modal__wrapper1');
+const modalWrapper2 = document.querySelector('.modal__wrapper2');
+const modalWrapper3 = document.querySelector('.modal__wrapper3');
+const closeBtn = document.querySelector('.close');
+
+trigger.addEventListener('click', function(){
+    openModal();
+});
+trigger1.addEventListener('click', function(){
+    modalWrapper1.classList.add('active');
+});
+trigger2.addEventListener('click', function(){
+    modalWrapper2.classList.add('active');
+});
+trigger3.addEventListener('click', function(){
+    modalWrapper3.classList.add('active');
+});
+
+closeBtn.addEventListener('click', function(){
+    closeModal();
+});
+closeBtn.addEventListener('click', function(){
+    modalWrapper1.classList.remove('active');
+});
+closeBtn.addEventListener('click', function(){
+    modalWrapper2.classList.remove('active');
+});
+closeBtn.addEventListener('click', function(){
+    modalWrapper3.classList.remove('active');
+});
+
+modalWrapper.addEventListener('click', function(e){
+    if(e.target !== this) return;
+    closeModal();
+});
+modalWrapper1.addEventListener('click', function(e){
+    if(e.target !== this) return;
+    modalWrapper1.classList.remove('active');
+});
+modalWrapper2.addEventListener('click', function(e){
+    if(e.target !== this) return;
+    modalWrapper2.classList.remove('active');
+});
+modalWrapper3.addEventListener('click', function(e){
+    if(e.target !== this) return;
+    modalWrapper3.classList.remove('active');
+});
+
+
+
+function openModal() {
+    modalWrapper.classList.add('active');
+}
+function closeModal() {
+    modalWrapper.classList.remove('active');
+}
+</script>

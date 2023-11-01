@@ -1,0 +1,215 @@
+
+<div class="contain mb-2">
+    <%- include ("./nav2") %>
+      <div class="navbar mt-4 navbar-dark bg-light justify-content-center border border-success" id="textarea">
+    
+        <h4 class="card-title font-weight-bold ">
+          <h2 class="text-success ">Teacher Feedback Form</h2>
+        </h4>
+      </div>
+    </div>
+    <div class="container mt-5">
+      <div class="card card-body">
+        <%- include ("./messages") %>
+        <form action="/feedback_teacher" method="POST">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email"
+              value="<%= typeof email != 'undefined' ? email : '' %>" />
+          </div>
+          
+          <div class="form-group">
+            <label for="text">Name of the Teacher</label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="Enter Your Answer"
+               />
+          </div>
+         
+          <div class="form-group">
+            <label for="text">Department</label>
+            <input type="text" id="department" name="department" class="form-control" placeholder="Enter Your Answer"
+               />
+          </div>
+
+          <div class="form-group">
+            <label for="text">Academic Year</label>
+            <input type="text" id="academic_year" name="academic_year" class="form-control" placeholder="Enter Academic Year"
+               />
+          </div>
+        
+        <div class="card-body">
+            <div class="row d-flex">
+                <label class=" font-weight-bold">Dear Professor</label>
+                <label class=" font-weight-bold">Greetings! This questionnaire is to collect feedback on curriculum, teaching learning and evaluation. The information will be used as important feedback for syllabus revision, restructuring of curriculum and quality improvement of the program</label>
+        </div>
+        </div>
+
+        <div class="card-body">
+            <div class="row d-flex">
+                <label class=" font-weight-bold">Kindly tick in the box that best corresponds to your opinion.</label>
+                <label class=" font-weight-bold">Excellent (5) Very Good (4) Good (3) Average (2) Poor (1)</label>
+        </div>
+        </div>
+
+          <div class="card-body">
+            <div class="row align-items-start"> 
+              <div class="col">
+            <label for="textarea"></label>
+          </div>
+            <div class="col">
+          <div class="form-check form-check-inline col-sm-2">
+            <label class="form-check-label" for="inlineCheckbox1">5</label>
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <label class="form-check-label" for="inlineCheckbox2">4</label>
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <label class="form-check-label" for="inlineCheckbox3">3</label>
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <label class="form-check-label" for="inlineCheckbox4">2</label>
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <label class="form-check-label" for="inlineCheckbox5">1</label>
+          </div>
+        </div>
+      </div>
+        </div>
+
+        <div class="card card-body">
+            <div class="row align-items-start"> 
+              <div class="col">
+            <label for="textarea">Course Content is Relevant and Need Based</label>
+          </div>
+            <div class="col">
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option1" id="inlineRadio1" value="5">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option1" id="inlineRadio2" value="4">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option1" id="inlineRadio3" value="3">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option1" id="inlineRadio3" value="2">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option1" id="inlineRadio3" value="1">
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+        <div class="card card-body">
+            <div class="row align-items-start"> 
+              <div class="col">
+            <label for="textarea">Course Outcomes are well defined and clear to staff and students</label>
+          </div>
+            <div class="col">
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option2" id="inlineRadio1" value="5">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option2" id="inlineRadio2" value="4">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option2" id="inlineRadio3" value="3">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option2" id="inlineRadio3" value="2">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option2" id="inlineRadio3" value="1">
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+        <div class="card card-body">
+            <div class="row align-items-start"> 
+              <div class="col">
+            <label for="textarea">Course Content has enough scope for development of analytical, logical, technical and creative skills to the students</label>
+          </div>
+            <div class="col">
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option3" id="inlineRadio1" value="5">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option3" id="inlineRadio2" value="4">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option3" id="inlineRadio3" value="3">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option3" id="inlineRadio3" value="2">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option3" id="inlineRadio3" value="1">
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+        <div class="card card-body">
+            <div class="row align-items-start"> 
+              <div class="col">
+            <label for="textarea">Course activities (Internships / Field Visit/ Guest Lectures/ Assignments/Seminars/Others) are relevant for development of various skills for employment and self-employment</label>
+          </div>
+            <div class="col">
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option4" id="inlineRadio1" value="5">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option4" id="inlineRadio2" value="4">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option4" id="inlineRadio3" value="3">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option4" id="inlineRadio3" value="2">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option4" id="inlineRadio3" value="1">
+          </div>
+        </div>
+      </div>
+      </div>
+        <div class="card card-body">
+            <div class="row align-items-start"> 
+              <div class="col">
+            <label for="textarea">The course/syllabus has good balance between theory and lab work</label>
+          </div>
+            <div class="col">
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option5" id="inlineRadio1" value="5">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option5" id="inlineRadio2" value="4">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option5" id="inlineRadio3" value="3">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option5" id="inlineRadio3" value="2">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option5" id="inlineRadio3" value="1">
+          </div>
+        </div>
+      </div>
+      </div>
+
+        <div class="card-body">
+          <label class="d-flex justify-content-center font-weight-bold"></label>
+        </div>
+          <button type="submit" class="btn btn-success btn-block">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+    </div>
+    

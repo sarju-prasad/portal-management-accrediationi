@@ -1,0 +1,97 @@
+
+<div class="contain mb-2">
+    <%- include ("./nav2") %>
+      <div class="navbar mt-4 navbar-dark bg-light justify-content-center border border-success" id="textarea">
+    
+        <h4 class="card-title font-weight-bold ">
+          <h2 class="text-success ">Alumni Feedback Form</h2>
+        </h4>
+      </div>
+    </div>
+    <div class="container mt-5">
+      <div class="card card-body">
+        <%- include ("./messages") %>
+        <form action="/feedback_alumni" method="POST">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email"
+              value="<%= typeof email != 'undefined' ? email : '' %>" />
+          </div>
+    
+          <div class="form-group font-weight-bold">
+            <label for="text">Department Of</label>
+            <input type="text" id="department" name="department" class="form-control" placeholder="Enter Your Answer"
+               />
+          </div>
+
+          <div class="card-body">
+            <div class="row d-flex justify-content-center">
+              <label class=" font-weight-bold">ALUMNI FEEDBACK FORM</label>
+              <label style="text-align: center; text-align: justify;">We shall be thankful and appreciate, if you could spare some of your valuable time to fill up this feedback form and give us your valuable suggestions for further improvement of the Department. Your valuable inputs will be of great use to us in improving the quality of our academic programs and to enhance the credibility of the Department/University.</label>
+            </div>
+          </div>
+    
+          <div class="form-group">
+            <label for="text">Name</label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="Enter Your Answer"
+               />
+          </div>
+          <div class="form-group">
+            <label for="text">Phone</label>
+            <input type="text" id="phone" name="phone" class="form-control" placeholder="Enter Your Answer"
+               />
+          </div>
+          <div class="form-group">
+            <label for="text">Degree</label>
+            <input type="text" id="degree" name="degree" class="form-control" placeholder="Enter Your Answer"
+               />
+          </div>
+          <div class="form-group">
+            <label for="text">Branch</label>
+            <input type="text" id="branch" name="branch" class="form-control" placeholder="Enter Your Answer"
+               />
+          </div>
+          <div class="form-group">
+            <label for="text">Year of Passing</label>
+            <input type="text" id="passing_year" name="passing_year" class="form-control" placeholder="Enter Your Answer"
+               />
+          </div>
+          <div class="form-group">
+            <label for="text">Enrollment No.</label>
+            <input type="text" id="enrollment_no" name="enrollment_no" class="form-control" placeholder="Enter Your Answer"
+               />
+          </div>
+
+          <div class="card-body">
+            <div class="row d-flexr">
+              <label class=" font-weight-bold">Professional Details</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="text">Name of the Organization</label>
+            <input type="text" id="organization_name" name="organization_name" class="form-control" placeholder="Enter Your Answer"
+               />
+          </div>
+          <div class="form-group">
+            <label for="text">Designation</label>
+            <input type="text" id="designation" name="designation" class="form-control" placeholder="Enter Your Answer"
+               />
+          </div>
+          <div class="form-group">
+            <label for="text">Year of Joining & HR detail</label>
+            <input type="text" id="joining_year" name="joining_year" class="form-control" placeholder="Enter Your Answer"
+               />
+          </div>
+          
+        <div class="card-body">
+          <label class="d-flex justify-content-center font-weight-bold"></label>
+        </div>
+          <button type="submit" class="btn btn-success btn-block">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+    </div>
+    

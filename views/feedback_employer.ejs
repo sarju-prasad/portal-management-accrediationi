@@ -1,0 +1,219 @@
+
+<div class="contain mb-2">
+    <%- include ("./nav2") %>
+      <div class="navbar mt-4 navbar-dark bg-light justify-content-center border border-success" id="textarea">
+    
+        <h4 class="card-title font-weight-bold ">
+          <h2 class="text-success ">Employer Feedback Form</h2>
+        </h4>
+      </div>
+    </div>
+    <div class="container mt-5">
+      <div class="card card-body">
+        <%- include ("./messages") %>
+        <form action="/feedback_employer" method="POST">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email"
+              value="<%= typeof email != 'undefined' ? email : '' %>" />
+          </div>
+          
+          <div class="form-group">
+            <label for="text">Name of the Employer</label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="Enter Your Answer"
+               />
+          </div>
+         
+          <div class="form-group">
+            <label for="text">Name of the Organization</label>
+            <input type="text" id="organization_name" name="organization_name" class="form-control" placeholder="Enter Your Answer"
+               />
+          </div>
+          <div class="form-group">
+            <label for="text">Designation</label>
+            <input type="text" id="designation" name="designation" class="form-control" placeholder="Enter Your Answer"
+               />
+          </div>
+
+          <div class="form-group">
+            <label for="text">Phone</label>
+            <input type="text" id="phone" name="phone" class="form-control" placeholder="Enter Your Answer"
+               />
+          </div>
+
+          <div class="form-group">
+            <label for="text">Address</label>
+            <input type="text" id="address" name="address" class="form-control" placeholder="Enter Your Answer"
+               />
+          </div>
+        
+        <div class="card-body">
+            <div class="row d-flex">
+                <label class=" font-weight-bold">(Please select in the relevant options)</label>
+                <label >A-Strongly Agree, B - Agree, C - Not Sure, D-Disagree, E-Strongly Disagree</label>
+        </div>
+        </div>
+
+          <div class="card-body">
+            <div class="row align-items-start"> 
+              <div class="col">
+            <label for="textarea"></label>
+          </div>
+            <div class="col">
+          <div class="form-check form-check-inline col-sm-2">
+            <label class="form-check-label" for="inlineCheckbox1">A</label>
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <label class="form-check-label" for="inlineCheckbox2">B</label>
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <label class="form-check-label" for="inlineCheckbox3">C</label>
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <label class="form-check-label" for="inlineCheckbox4">D</label>
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <label class="form-check-label" for="inlineCheckbox5">E</label>
+          </div>
+        </div>
+      </div>
+        </div>
+
+        <div class="card card-body">
+            <div class="row align-items-start"> 
+              <div class="col">
+            <label for="textarea">How do you rate relevance of the courses in relation to the program?</label>
+          </div>
+            <div class="col">
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option1" id="inlineRadio1" value="A">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option1" id="inlineRadio2" value="B">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option1" id="inlineRadio3" value="C">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option1" id="inlineRadio3" value="D">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option1" id="inlineRadio3" value="E">
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+        <div class="card card-body">
+            <div class="row align-items-start"> 
+              <div class="col">
+            <label for="textarea">How do you rate the sufficiency of the courses related to industry that are included in the program?</label>
+          </div>
+            <div class="col">
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option2" id="inlineRadio1" value="A">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option2" id="inlineRadio2" value="B">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option2" id="inlineRadio3" value="C">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option2" id="inlineRadio3" value="D">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option2" id="inlineRadio3" value="E">
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+        <div class="card card-body">
+            <div class="row align-items-start"> 
+              <div class="col">
+            <label for="textarea">How do you rate the competencies/outcomes in relation to the course content?</label>
+          </div>
+            <div class="col">
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option3" id="inlineRadio1" value="A">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option3" id="inlineRadio2" value="B">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option3" id="inlineRadio3" value="C">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option3" id="inlineRadio3" value="D">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option3" id="inlineRadio3" value="E">
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+        <div class="card card-body">
+            <div class="row align-items-start"> 
+              <div class="col">
+            <label for="textarea">How do you rate the relevance of the topics to the Industry?</label>
+          </div>
+            <div class="col">
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option4" id="inlineRadio1" value="A">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option4" id="inlineRadio2" value="B">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option4" id="inlineRadio3" value="C">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option4" id="inlineRadio3" value="D">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option4" id="inlineRadio3" value="E">
+          </div>
+        </div>
+      </div>
+      </div>
+        <div class="card card-body">
+            <div class="row align-items-start"> 
+              <div class="col">
+            <label for="textarea">Rate the offering of the in relation to the specialization streams?</label>
+          </div>
+            <div class="col">
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option5" id="inlineRadio1" value="A">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option5" id="inlineRadio2" value="B">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option5" id="inlineRadio3" value="C">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option5" id="inlineRadio3" value="D">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="Option5" id="inlineRadio3" value="E">
+          </div>
+        </div>
+      </div>
+      </div>
+
+        <div class="card-body">
+          <label class="d-flex justify-content-center font-weight-bold"></label>
+        </div>
+          <button type="submit" class="btn btn-success btn-block">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+    </div>
+    

@@ -1,0 +1,131 @@
+<div class="contain mb-2">
+    <%- include ("./nav2") %>
+    <div class="navbar mt-4 navbar-dark bg-light justify-content-center border border-success" id="textarea">
+  
+      <h4 class="card-title font-weight-bold ">
+        <h2 class="text-success ">Allotment of Faculty to Student Mentors</h2>
+      </h4>
+    </div>
+  </div>
+  <div class="container mt-5">
+    <div class="card card-body">
+      <%- include ("./messages") %>
+        <form action="/faculty_allot_student" method="POST">
+          <div class="form-group">
+  
+            <div class="row">
+            <div class="col ">
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" class="form-control" placeholder="Enter Date"
+                value="<%= typeof date != 'undefined' ? date : '' %>"/>
+            </div>
+            <div class="col ">
+              <label for="branch">Branch and Year</label>
+            <input type="text" id="class" name="branch_year" class="form-control" placeholder="Enter Branch / Year"
+            value="<%= typeof topic != 'undefined' ? topic : '' %>"/>
+          </div>
+            <div class="col ">
+              <label for="topic">Discuss the Problem</label>
+            <input type="text" id="class" name="topic" class="form-control" placeholder="Enter topic"
+            value="<%= typeof topic != 'undefined' ? topic : '' %>"/>
+          </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 my-2">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="textarea">Assign Faculty</label>
+                    <select class="form-select" aria-label="Default select example" name="name" id="textarea">
+                      
+                      
+                      <% for(var i = (data.length-1); i>= 0 ; i--) { %>
+                      <option value="<%=data[i].name %>">{<%=data[i].name%>}</option>
+                      <% } %>
+                    </select>
+             
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 my-2">
+                <div class="form-group">
+                  <label for="type">Select Students by Group</label>
+                  <select class="form-select" aria-label="Default select example" name="rollno" id="rollno">
+                    <option value="11-20"><b>1-10</b></option>
+                    <option value="11-20"><b>11-20</b></option>
+                    <option value="11-20"><b>21-30</b></option>
+                    <option value="11-20"><b>31-40</b></option>
+                    <option value="11-20"><b>41-50</b></option>
+                    <option value="11-20"><b>51-60</b></option>
+                    <option value="11-20"><b>61-70</b></option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class=" gap-1 col-1 mx-auto">
+              <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+        </form>
+    </div>
+  </div>
+  </div>
+
+
+
+  <div class="contain mb-2">
+    <div class="navbar mt-4 navbar-dark bg-light justify-content-center border border-success" id="textarea">
+  
+      <h4 class="card-title font-weight-bold ">
+        <h2 class="text-success ">View Faculty alloted to student Mentor</h2>
+      </h4>
+    </div>
+  </div>
+  
+  <div class="card mr-2 ml-2">
+      <div class="card card-outline card-primary">
+        <div class="card-body">
+          <table id="myTable" class="table tabe-hover table-bordered table-responsive table-condensed " id="parent">
+  
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Branch / Year</th>
+                <th>Discuss the Problem</th>
+                <th>Select Faculty</th>
+                <th>Select Students by Group</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+  
+            <tbody>
+              <% for(var i = (users.length-1); i>= 0 ; i--) { %>
+              <tr>
+  
+                
+                <td><b><%=users[i].date%></b></td>
+                <td><b><%=users[i].branch_year%></b></td>
+                <td><b><%=users[i].topic%></b></td>
+                <td><b><%=users[i].name%></b></td>
+                <td><b><%=users[i].rollno%></b></td>
+                
+  
+                <td class="text-center">
+                  <div class="btn-group">
+                    <a href="/delete_mentor_<%= users[i]._id %>" onclick="return confirm('Are you confirm want to delete');"  class="btn border-shadow btn-danger delete" class="btn btn-success btn-flat">
+                      <i class="fas fa-trash"></i>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <% } %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      </div>
+        <!-- <button id="printButton">Print</button> -->
+  
+  <script>
+    document.getElementById('printButton').addEventListener('click',function(){
+      fetch('/generate-pdf', {method: 'GET'});
+    });
+  </script>

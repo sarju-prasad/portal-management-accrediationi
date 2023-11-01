@@ -1,0 +1,561 @@
+
+<div class="contain mb-2">
+    <%- include ("./nav2") %>
+      <div class="navbar mt-4 navbar-dark bg-light justify-content-center border border-success" id="textarea">
+    
+        <h4 class="card-title font-weight-bold ">
+          <h2 class="text-success ">Student Feedback Form</h2>
+        </h4>
+      </div>
+    </div>
+    <div class="container mt-5">
+      <div class="card card-body">
+        <%- include ("./messages") %>
+        <form action="/feedback_student" method="POST">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email"
+              value="<%= typeof email != 'undefined' ? email : '' %>" />
+          </div>
+    
+          <div class="form-group">
+            <label for="text">Academic Year</label>
+            <input type="text" id="academic_year" name="academic_year" class="form-control" placeholder="Enter Academic Year"
+               />
+          </div>
+
+          <div class="form-group">
+            <label for="text">Semester</label>
+            <input type="text" id="semester" name="semester" class="form-control" placeholder="Enter Semester"
+               />
+          </div>
+          
+        <div class="card card-title border-success mb-3 text-success">
+          <label class="d-flex justify-content-center font-weight-bold" >Feedback for Classes</label>
+        </div>
+        <div class="card-body">
+          <label class="d-flex justify-content-center font-weight-bold"></label>
+        </div>
+
+        <div class="form-group">
+          <label for="text">Course Code / Name Of the Course / Name Of the Teacher </label>
+          <input type="text" id="course1" name="course1" class="form-control" placeholder="Enter ..."
+             />
+        </div>        
+
+        <div class="card-body">
+          <div class="row d-flex justify-content-center">
+            <label class=" font-weight-bold">Please Respond to the following by writing 1/2/3/4/5 as five-point scale</label>
+            <label > Not at all=1 Less than Average=2 Average=3 More than Average=4 Very much so=5</label>
+          </div>
+        </div>
+
+          <div class="card-body">
+            <div class="row align-items-start"> 
+              <div class="col">
+            <label for="textarea"></label>
+          </div>
+            <div class="col">
+          <div class="form-check form-check-inline col-sm-2">
+            <label class="form-check-label" for="inlineCheckbox1">1</label>
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <label class="form-check-label" for="inlineCheckbox2">2</label>
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <label class="form-check-label" for="inlineCheckbox3">3</label>
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <label class="form-check-label" for="inlineCheckbox4">4</label>
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <label class="form-check-label" for="inlineCheckbox5">5</label>
+          </div>
+        </div>
+      </div>
+        </div>
+
+        <div class="card card-body">
+            <div class="row align-items-start"> 
+              <div class="col">
+            <label for="textarea">Punctuality and regularity in taking classes</label>
+          </div>
+            <div class="col">
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption1" id="inlineRadio1" value="option1">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption1" id="inlineRadio1" value="option2">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption1" id="inlineRadio1" value="option3">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption1" id="inlineRadio1" value="option4">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption1" id="inlineRadio1" value="option5">
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+        <div class="card card-body">
+            <div class="row align-items-start"> 
+              <div class="col">
+            <label for="textarea">Focus on syllabi and completing syllabus in time.</label>
+          </div>
+            <div class="col">
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption2" id="inlineRadio2" value="option1">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption2" id="inlineRadio2" value="option2">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption2" id="inlineRadio2" value="option3">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption2" id="inlineRadio2" value="option4">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption2" id="inlineRadio2" value="option5">
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+        <div class="card card-body">
+            <div class="row align-items-start"> 
+              <div class="col">
+            <label for="textarea">Regularity in giving assignments, quizzes.</label>
+          </div>
+            <div class="col">
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption3" id="inlineRadio3" value="option1">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption3" id="inlineRadio3" value="option2">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption3" id="inlineRadio3" value="option3">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption3" id="inlineRadio3" value="option4">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption3" id="inlineRadio3" value="option5">
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+        <div class="card card-body">
+            <div class="row align-items-start"> 
+              <div class="col">
+            <label for="textarea">The question raised in class were satisfactorily answered.</label>
+          </div>
+            <div class="col">
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption4" id="inlineRadio4" value="option1">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption4" id="inlineRadio4" value="option2">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption4" id="inlineRadio4" value="option3">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption4" id="inlineRadio4" value="option4">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption4" id="inlineRadio4" value="option5">
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+        <div class="card card-body">
+            <div class="row align-items-start"> 
+              <div class="col">
+            <label for="textarea">Helping approach towards students.</label>
+          </div>
+            <div class="col">
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption5" id="inlineRadio5" value="option1">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption5" id="inlineRadio5" value="option2">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption5" id="inlineRadio5" value="option3">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption5" id="inlineRadio5" value="option4">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption5" id="inlineRadio5" value="option5">
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="card-body">
+        <label class="d-flex justify-content-center font-weight-bold"></label>
+      </div>
+        <div class="form-group">
+          <label for="text">Course Code / Name Of the Course / Name Of the Teacher </label>
+          <input type="text" id="course2" name="course2" class="form-control" placeholder="Enter ..."
+             />
+        </div>        
+
+        <div class="card-body">
+          <div class="row d-flex justify-content-center">
+            <label class=" font-weight-bold">Please Respond to the following by writing 1/2/3/4/5 as five-point scale</label>
+            <label > Not at all=1 Less than Average=2 Average=3 More than Average=4 Very much so=5</label>
+          </div>
+        </div>
+
+          <div class="card-body">
+            <div class="row align-items-start"> 
+              <div class="col">
+            <label for="textarea"></label>
+          </div>
+            <div class="col">
+          <div class="form-check form-check-inline col-sm-2">
+            <label class="form-check-label" for="inlineCheckbox1">1</label>
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <label class="form-check-label" for="inlineCheckbox2">2</label>
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <label class="form-check-label" for="inlineCheckbox3">3</label>
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <label class="form-check-label" for="inlineCheckbox4">4</label>
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <label class="form-check-label" for="inlineCheckbox5">5</label>
+          </div>
+        </div>
+      </div>
+        </div>
+
+        <div class="card card-body">
+            <div class="row align-items-start"> 
+              <div class="col">
+            <label for="textarea">Punctuality and regularity in taking classes</label>
+          </div>
+            <div class="col">
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption6" id="inlineRadio6" value="option1">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption6" id="inlineRadio6" value="option2">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption6" id="inlineRadio6" value="option3">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption6" id="inlineRadio6" value="option4">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption6" id="inlineRadio6" value="option5">
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+        <div class="card card-body">
+            <div class="row align-items-start"> 
+              <div class="col">
+            <label for="textarea">Focus on syllabi and completing syllabus in time.</label>
+          </div>
+            <div class="col">
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption7" id="inlineRadio7" value="option1">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption7" id="inlineRadio7" value="option2">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption7" id="inlineRadio7" value="option3">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption7" id="inlineRadio7" value="option4">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption7" id="inlineRadio7" value="option5">
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+        <div class="card card-body">
+            <div class="row align-items-start"> 
+              <div class="col">
+            <label for="textarea">Regularity in giving assignments, quizzes.</label>
+          </div>
+            <div class="col">
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption8" id="inlineRadio8" value="option1">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption8" id="inlineRadio8" value="option2">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption8" id="inlineRadio8" value="option3">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption8" id="inlineRadio8" value="option4">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption8" id="inlineRadio8" value="option5">
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+        <div class="card card-body">
+            <div class="row align-items-start"> 
+              <div class="col">
+            <label for="textarea">The question raised in class were satisfactorily answered.</label>
+          </div>
+            <div class="col">
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption9" id="inlineRadio9" value="option1">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption9" id="inlineRadio9" value="option2">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption9" id="inlineRadio9" value="option3">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption9" id="inlineRadio9" value="option4">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption9" id="inlineRadio9" value="option5">
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+        <div class="card card-body">
+            <div class="row align-items-start"> 
+              <div class="col">
+            <label for="textarea">Helping approach towards students.</label>
+          </div>
+            <div class="col">
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption10" id="inlineRadio10" value="option1">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption10" id="inlineRadio10" value="option2">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption10" id="inlineRadio10" value="option3">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption10" id="inlineRadio10" value="option4">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption10" id="inlineRadio10" value="option5">
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="card-body">
+        <label class="d-flex justify-content-center font-weight-bold"></label>
+      </div>
+        <div class="form-group">
+          <label for="text">Course Code / Name Of the Course / Name Of the Teacher </label>
+          <input type="text" id="course3" name="course3" class="form-control" placeholder="Enter ..."
+             />
+        </div>        
+
+        <div class="card-body">
+          <div class="row d-flex justify-content-center">
+            <label class=" font-weight-bold">Please Respond to the following by writing 1/2/3/4/5 as five-point scale</label>
+            <label > Not at all=1 Less than Average=2 Average=3 More than Average=4 Very much so=5</label>
+          </div>
+        </div>
+
+          <div class="card-body">
+            <div class="row align-items-start"> 
+              <div class="col">
+            <label for="textarea"></label>
+          </div>
+            <div class="col">
+          <div class="form-check form-check-inline col-sm-2">
+            <label class="form-check-label" for="inlineCheckbox1">1</label>
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <label class="form-check-label" for="inlineCheckbox2">2</label>
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <label class="form-check-label" for="inlineCheckbox3">3</label>
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <label class="form-check-label" for="inlineCheckbox4">4</label>
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <label class="form-check-label" for="inlineCheckbox5">5</label>
+          </div>
+        </div>
+      </div>
+        </div>
+
+        <div class="card card-body">
+            <div class="row align-items-start"> 
+              <div class="col">
+            <label for="textarea">Punctuality and regularity in taking classes</label>
+          </div>
+            <div class="col">
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption11" id="inlineRadio11" value="option1">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption11" id="inlineRadio11" value="option2">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption11" id="inlineRadio11" value="option3">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption11" id="inlineRadio11" value="option4">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption11" id="inlineRadio11" value="option5">
+          </div>
+        </div>
+      </div>
+      </div>
+
+        <div class="card card-body">
+            <div class="row align-items-start"> 
+              <div class="col">
+            <label for="textarea">Focus on syllabi and completing syllabus in time.</label>
+          </div>
+            <div class="col">
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption12" id="inlineRadio12" value="option1">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption12" id="inlineRadio12" value="option2">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption12" id="inlineRadio12" value="option3">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption12" id="inlineRadio12" value="option4">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption12" id="inlineRadio12" value="option5">
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+        <div class="card card-body">
+            <div class="row align-items-start"> 
+              <div class="col">
+            <label for="textarea">Regularity in giving assignments, quizzes.</label>
+          </div>
+            <div class="col">
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption13" id="inlineRadio13" value="option1">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption13" id="inlineRadio13" value="option2">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption13" id="inlineRadio13" value="option3">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption13" id="inlineRadio13" value="option4">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption13" id="inlineRadio13" value="option5">
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+        <div class="card card-body">
+            <div class="row align-items-start"> 
+              <div class="col">
+            <label for="textarea">The question raised in class were satisfactorily answered.</label>
+          </div>
+            <div class="col">
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption14" id="inlineRadio14" value="option1">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption14" id="inlineRadio14" value="option2">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption14" id="inlineRadio14" value="option3">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption14" id="inlineRadio14" value="option4">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption14" id="inlineRadio14" value="option5">
+          </div>
+        </div>
+      </div>
+      </div>
+
+        <div class="card card-body">
+            <div class="row align-items-start"> 
+              <div class="col">
+            <label for="textarea">Helping approach towards students.</label>
+          </div>
+            <div class="col">
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption15" id="inlineRadio15" value="option1">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption15" id="inlineRadio15" value="option2">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption15" id="inlineRadio15" value="option3">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption15" id="inlineRadio15" value="option4">
+          </div>
+          <div class="form-check form-check-inline col-sm-2">
+            <input class="form-check-input" type="radio" name="RadioOption15" id="inlineRadio15" value="option5">
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="card-body">
+        <label class="d-flex justify-content-center font-weight-bold"></label>
+      </div>
+        <div class="form-group font-weight-bold">
+          <label for="text">Any Suggestions</label>
+          <input type="text" id="suggestion" name="suggestion" class="form-control" placeholder="Enter ..."
+             />
+        </div> 
+        <div class="card-body">
+          <label class="d-flex justify-content-center font-weight-bold"></label>
+        </div>
+          <button type="submit" class="btn btn-success btn-block">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+    </div>
+    

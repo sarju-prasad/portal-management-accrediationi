@@ -1,0 +1,213 @@
+<div class="contain mb-2">
+    <%- include ("./nav2") %>
+        <div class="navbar mt-4 navbar-dark bg-light justify-content-center border border-success" id="textarea">
+
+            <h4 class="card-title font-weight-bold ">
+                <h2 class="text-success ">Parent Feedback Form</h2>
+            </h4>
+        </div>
+</div>
+<div class="container mt-5">
+    <div class="card card-body">
+        <%- include ("./messages") %>
+            <form action="/feedback_parent" method="POST">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email"
+                        value="<%= typeof email != 'undefined' ? email : '' %>" />
+                </div>
+
+                <div class="form-group">
+                    <label for="text">Name</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Enter Name" />
+                </div>
+
+                <div class="form-group mt-2">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label for="textarea">Relationship</label>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-select mb-6 col-md-6" aria-label="Default select example"
+                                name="relation" id="textarea">
+                                <option>Choose</option>
+                                <option value="Father">Father</option>
+                                <option value="Mother"> Mother</option>
+                                <option value="Guardian">Guardian</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="text">Student's Name</label>
+                    <input type="text" id="s_name" name="s_name" class="form-control"
+                        placeholder="Enter Student's Name" />
+                </div>
+
+                <div class="form-group">
+                    <label for="text">Branch</label>
+                    <input type="text" id="branch" name="branch" class="form-control" placeholder="Enter Branch" />
+                </div>
+
+                <div class="form-group">
+                    <label for="text">Academic Year</label>
+                    <input type="text" id="academic_year" name="academic_year" class="form-control"
+                        placeholder="Enter Academic Year" />
+                </div>
+
+                <div class="card-body">
+                    <label class="d-flex justify-content-center"></label>
+                </div>
+
+                <div class="card-body">
+                    <div class="row d-flex justify-content-center">
+                        <label class=" font-weight-bold">The purpose of this survey is to obtain your feedback towards
+                            the curriculum, learning and evaluation. The feedback will be kept confidential and used for
+                            syllabus revision, restricting of curriculum and quality improvement of the
+                            programme.</label>
+                        <label class=" font-weight-bold">Kindly tick on the best corresponds to your opinion</label>
+                    </div>
+                </div>
+
+                <div class="card card-body">
+                    <div class="col">
+                        <label for="textarea">1. Academic Programme of CSJMU is:</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Option1" id="Rigorous"
+                                value="Rigorous">
+                            <label for="Rigorous">Rigorous</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Option1" id="Not so rigorous"
+                                value="Not so rigorous">
+                            <label for="Not so rigorous">Not so rigorous</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Option1" id="Adequate"
+                                value="Adequate">
+                            <label for="Adequate">Adequate</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Option1" id="Inadequate"
+                                value="Inadequate">
+                            <label for="Inadequate">Inadequate</label>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                <div class="card card-body">
+                    <div class="col">
+                        <label for="textarea">2. Quality of teachers at CSJMU is:</label>
+                        <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="Option2" id="Not Satisfactory"
+                                value="Not Satisfactory">
+                            <label for=" Not Satisfactory">Not Satisfactory</label>
+                        </div>
+                        <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="Option2" id="Satisfactory"
+                                value="Satisfactory">
+                            <label for="Satisfactory">Satisfactory</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Option2" id="Good" value="Good">
+                            <label for="Good">Good</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Option2" id="Excellent"
+                                value="Excellent">
+                            <label for="Excellent">Excellent</label>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="card card-body">
+                    <div class="col">
+                        <label for="textarea">3. Accessibility of teachers for parents in the department:</label>
+                        <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="Option3" id="Not Satisfactory"
+                                value="Not Satisfactory">
+                            <label for=" Not Satisfactory"> Not Satisfactory</label>
+                        </div>
+                        <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="Option3" id="Satisfactory"
+                                value="Satisfactory">
+                            <label for="Satisfactory">Satisfactory</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Option3" id="Good" value="Good">
+                            <label for="Good">Good</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Option3" id="Excellent"
+                                value="Excellent">
+                            <label for="Excellent">Excellent</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card-body">
+                    <div class="col">
+                        <label for="textarea">4. Internship as part of degree Programme is:</label>
+                        <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="Option4" id="Not very useful"
+                                value="Not very useful">
+                            <label for="Not very useful">Not very useful</label>
+                        </div>
+                        <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="Option4" id="Some times useful"
+                                value="Some times useful">
+                            <label for="Some times useful">Some times useful</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Option4" id="Mostly useful"
+                                value="Mostly useful">
+                            <label for="Mostly useful">Mostly useful</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Option4" id="Very useful"
+                                value="Very useful">
+                            <label for="Very useful">Very useful</label>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="card card-body">
+                    <div class="col">
+                        <label for="textarea">5. My overall impression about the University:</label>
+                        <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="Option5"
+                                id="Great and commendable satisfied" value="Great and commendable satisfied">
+                            <label for="Great and commendable satisfied">Great and commendable satisfied</label>
+                        </div>
+                        <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="Option5" id="Some times useful"
+                                value="Some times useful">
+                            <label for="Some times useful">Some times useful</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Option5" id="Just Enough"
+                                value="Just Enough">
+                            <label for="Just Enough">Just Enough</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Option5" id="Not Satisfied"
+                                value="Not Satisfied">
+                            <label for="Not Satisfied">Not Satisfied</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <label class="d-flex justify-content-center font-weight-bold"></label>
+                </div>
+                <button type="submit" class="btn btn-success btn-block">
+                    Submit
+                </button>
+            </form>
+    </div>
+</div>
+</div>
